@@ -17,33 +17,31 @@
           <%= locals.totalScore ? totalScore : "0" %>
         </span>
       </h3>
-
     </div>
 
     <h1 id="countryName">
-      <%=question.country %>
+      <%= question.country %>
     </h1>
     <div class="answer-container">
       <input type="text" name="answer" id="userInput" placeholder="Enter the capital" autofocus autocomplete="off">
-
     </div>
-    <button type="submit">SUBMIT<% if(locals.wasCorrect){ %>
+    <button type="submit">SUBMIT
+      <% if (locals.wasCorrect) { %>
         <span class="checkmark">✔</span>
-        <% } else if (locals.wasCorrect===false) { %>
-          <span class="cross" id="error">✖</span>
-          <% } %>
+      <% } else if (locals.wasCorrect === false) { %>
+        <span class="cross" id="error">✖</span>
+      <% } %>
     </button>
-
   </form>
+
   <script>
+    // Check if the answer was correct and display an alert if the game is over
     var wasCorrect = "<%= locals.wasCorrect %>";
-    console.log(wasCorrect)
+    console.log(wasCorrect);
     if (wasCorrect === "false") {
       alert('Game over! Final best score: <%= locals.totalScore %>');
-      document.getElementById("app").innerHTML = '<a href="/" class="restart-button">Restart</a>'
+      document.getElementById("app").innerHTML = '<a href="/" class="restart-button">Restart</a>';
     }
-
-
   </script>
 </body>
 
