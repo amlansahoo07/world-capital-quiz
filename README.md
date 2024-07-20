@@ -1,3 +1,6 @@
+<img width="1024" alt="image" src="https://github.com/user-attachments/assets/ee499410-08ed-408a-ac1e-88b0ea673b2d">
+
+
 # World Capital Quiz
 
 This project is a simple web application that quizzes users on capital cities around the world. It uses Express.js for the server, PostgreSQL for the database, and EJS for templating.
